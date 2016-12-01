@@ -1,0 +1,46 @@
+{%load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+<link href="{% static 'ZooApp/index/default.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'ZooApp/index/fonts.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body id="main_body">
+
+<div id="wrapper1">
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo"> <span class="icon icon-cogs"></span>
+				<h1><a href="#">Wildlife</a></h1>
+			</div>
+			<div id="menu">
+				<ul>
+					<li {% if current == "homepage" %}class="current_page_item"{%endif%}>
+						<a href="/" accesskey="1" title="">Homepage</a>
+					</li>
+					<li {% if current == "employees" %}class="current_page_item"{%endif%}>
+						<a href="{%url 'empview' %}" accesskey="2" title="">Employees</a>
+					</li>
+					<li {% if current == "donate" %}class="current_page_item"{%endif%}>
+						<a href="{%url 'donor' %}" accesskey="3" title="">Donate Us</a>
+					</li>
+					<li><a href="/admin/" accesskey="4" title="">Admin</a></li>
+					<li {% if current == "contact" %}class="current_page_item"{%endif%}>
+						<a href="{%url 'contactus'%}" accesskey="5" title="">Contact Us</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+{% block content %}{% endblock %}
+
+</body>
+</html>

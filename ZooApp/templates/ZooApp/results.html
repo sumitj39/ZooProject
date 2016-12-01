@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'ZooApp/results/style.css'%}">
+<script type="text/javascript" src="{% static 'ZooApp/results/jquery.js' %}"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="box">
+    {% for h in htodisp%}
+ <pre><span>NAME:{{h.name}}
+
+</span>Species: {{h.species_id.common_name}}  ({{h.species_id.latin_name}})<br><br>GENDER: {{h.gender}}<br><br>AGE:{{h.age}}
+  </pre>
+    {%endfor%}
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Embellished
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140207
+
+-->
+{% extends "ZooApp/layout.html" %}
+{%load static %}
+{% block content %}
+<div id="wrapper3">
+		<div id="portfolio" class="container">
+			<div class="title">
+				<h2>Welcome</h2>
+				<span class="byline">Login or Register</span> </div>
+
+			<div class="column1">
+				<div class="box">
+					<h3>Login</h3>
+					<p>Are you an employee? Login.</p>
+					<a href="{%url 'userlogin'%}" class="button button-small">Login</a> </div>
+			</div>
+			<div class="column4">
+				<div class="box">
+					<h3>Register</h3>
+					<p>New Employee? Register.</p>
+					<a href="{%url 'register'%}" class="button button-small">Register</a> </div>
+			</div>
+		</div>
+	</div>
+{%endblock%}
